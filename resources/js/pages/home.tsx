@@ -40,7 +40,7 @@ export default function Home() {
         <AppLayout breadcrumbs={breadcrumbs}>
             <Head title="Home" />
             <div className="flex h-full justify-center items-center flex-1 flex-col gap-4 rounded-xl p-4">
-                <h1 className='text-6xl'>Our LootBox!</h1>
+                <h1 className='text-6xl'>Our LootBox is updated!</h1>
                 <div
                     ref={animatedRef}
                     className={`h-150 w-150 bg-cover bg-top  animated-box ${
