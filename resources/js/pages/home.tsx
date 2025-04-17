@@ -57,7 +57,7 @@ export default function Home() {
         <AppLayout breadcrumbs={breadcrumbs}>
             <Head title="Home" />
             <div className="flex h-full justify-center items-center flex-1 flex-col gap-4 rounded-xl p-4">
-                <h1 className='text-6xl'>Our LootBox is updated!</h1>
+                <h1 className='text-6xl shizuru'>Datz WILD!</h1>
                 <div
                     ref={animatedRef}
                     className={`h-150 w-150 bg-cover bg-top  animated-box ${
@@ -70,16 +70,16 @@ export default function Home() {
                     <h1 className='text-4xl'> What our Box Has inside of it:</h1>
                     <ul>
                         <li className='my-2'>
-                            <span>hand bag</span>
+                            <span>Key Chains</span>
                         </li>
                         <li  className='my-2'>
-                            <span>bomb defuse kit</span>
+                            <span>T-shirt</span>
                         </li>
                         <li  className='my-2'>
-                            <span>dead fish</span>
+                            <span>Stickers</span>
                         </li>
                         <li  className='my-2'>
-                            scales from an endangered local fish species
+                            Thank you Letter
                         </li>
                     </ul>
                 </div>

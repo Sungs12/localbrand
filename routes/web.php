@@ -17,6 +17,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
         return Inertia::render('home');
     })->name('home');
 });
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('about', function () {
+        return Inertia::render('about');
+    })->name('home');
+});
 
 
 require __DIR__.'/settings.php';

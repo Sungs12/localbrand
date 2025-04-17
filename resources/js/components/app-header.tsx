@@ -16,11 +16,6 @@ import AppLogoIcon from './app-logo-icon';
 
 const mainNavItems: NavItem[] = [
     {
-        title: 'Dashboard',
-        href: '/dashboard',
-        icon: LayoutGrid,
-    },
-    {
         title: 'Home',
         href: '/home',
         icon: BoxIcon,
@@ -99,7 +94,7 @@ export function AppHeader({ breadcrumbs = [] }: AppHeaderProps) {
                     </div>
 
                     <Link href="/dashboard" prefetch className="flex items-center space-x-2">
-                        <h1 className='text-2xl font-bold flex items-center'><FishSymbol className='mr-2'/>CURSE YOU BAYLE</h1>
+                        <h1 className='text-2xl font-bold flex items-center shizuru'><FishSymbol className='mr-2'/>EksotikaBox</h1>
                     </Link>
 
                     {/* Desktop Navigation */}
