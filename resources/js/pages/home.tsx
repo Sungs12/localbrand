@@ -3,6 +3,7 @@ import { type BreadcrumbItem } from '@/types';
 import { Head } from '@inertiajs/react';
 import '../../css/home.css';
 import { useEffect, useRef, useState } from 'react';
+import {animate} from 'animejs';
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
@@ -19,18 +20,34 @@ export default function Home() {
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
+                    animate('.animated-box',{
+                        size:[0, 150],
+                        opacity: [0, 1], // Fade in
+                        easing: 'easeOutQuad',
+                        duration: 1000, // Animation duration in ms
+                    });
                     setIsVisible(true);
+                    
                 }
             },
             { threshold: 0.1 } // Trigger when 10% of the element is visible
         );
 
         if (animatedRef.current) {
+             // Trigger Anime.js animation
+             animate('.animated-box',{
+                translateY: [0, -10, 0], // Float effect
+                easing: 'easeInOutQuad',
+                duration: 3000, // Animation duration in ms
+                loop: true,
+                direction:'alternate'
+            });
             observer.observe(animatedRef.current);
         }
 
         return () => {
             if (animatedRef.current) {
+                
                 observer.unobserve(animatedRef.current);
             }
         };
@@ -44,7 +61,7 @@ export default function Home() {
                 <div
                     ref={animatedRef}
                     className={`h-150 w-150 bg-cover bg-top  animated-box ${
-                        isVisible ? 'animate-fade-in-up' : 'opacity-0'
+                        isVisible ? 'animated-box' : 'opacity-0'
                     }`}
                     style={{ backgroundImage: "url(/box-with-things.png)" }}
                 />

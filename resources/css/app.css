@@ -157,3 +157,13 @@
         @apply bg-background text-foreground;
     }
 }
+@font-face {
+    font-family: 'Shizuru';
+    src:url('/Shizuru.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.shizuru{
+    font-family:shizuru;
+}
