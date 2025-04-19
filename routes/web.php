@@ -20,8 +20,19 @@ Route::middleware(['auth', 'verified'])->group(function () {
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('about', function () {
         return Inertia::render('about');
-    })->name('home');
+    })->name('about');
 });
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('catalog', function () {
+        return Inertia::render('catalog');
+    })->name('catalog');
+});
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('inside', function () {
+        return Inertia::render('inside');
+    })->name("What's Inside");
+});
+
 
 
 require __DIR__.'/settings.php';

@@ -22,17 +22,17 @@ export default function Home() {
                 if (entry.isIntersecting) {
                     animate('.animated-box',{
                         size:[0, 150],
-                        opacity: [0, 1], // Fade in
+                        opacity: [0, 0.5], // Fade in
                         easing: 'easeOutQuad',
                         duration: 1000, // Animation duration in ms
                     });
                     setIsVisible(true);
                     
+                    
                 }
             },
             { threshold: 0.1 } // Trigger when 10% of the element is visible
         );
-
         if (animatedRef.current) {
              // Trigger Anime.js animation
              animate('.animated-box',{
@@ -57,10 +57,10 @@ export default function Home() {
         <AppLayout breadcrumbs={breadcrumbs}>
             <Head title="Home" />
             <div className="flex h-full justify-center items-center flex-1 flex-col gap-4 rounded-xl p-4">
-                <h1 className='text-6xl shizuru'>Datz WILD!</h1>
+                <h1 className='text-6xl shizuru animate-fade-in-up'>Datz WILD!</h1>
                 <div
                     ref={animatedRef}
-                    className={`h-150 w-150 bg-cover bg-top  animated-box ${
+                    className={`h-150 w-150 bg-cover bg-top animate-fade-in-up animated-box ${
                         isVisible ? 'animated-box' : 'opacity-0'
                     }`}
                     style={{ backgroundImage: "url(/box-with-things.png)" }}
