@@ -56,7 +56,7 @@ export default function Home() {
             <Head title="Home" />
             <div className="flex h-full justify-center items-center flex-1 flex-col gap-4 rounded-xl p-4">
             <h1 className="text-4xl shizuru animate-fade-in-up">Here Comes The First WAVE!</h1>
-                <h1 className="text-8xl shizuru animate-fade-in-up">DATZ WILD!</h1>
+                <h1 className="text-8xl rashkey animate-fade-in-up">DATZ WILD!</h1>
                 <div
                     ref={animatedRef}
                     className={`h-150 w-150 bg-cover bg-top animate-fade-in-up animated-box ${
