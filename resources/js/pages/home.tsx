@@ -54,22 +54,25 @@ export default function Home() {
     return (
         <AppLayout breadcrumbs={breadcrumbs}>
             <Head title="Home" />
-            <div className="flex h-full justify-center items-center flex-1 flex-col gap-4 rounded-xl p-4">
-            <h1 className="text-4xl shizuru animate-fade-in-up">Here Comes The First WAVE!</h1>
-                <h1 className="text-8xl rashkey animate-fade-in-up">DATZ WILD!</h1>
-                <div
-                    ref={animatedRef}
-                    className={`h-150 w-150 bg-cover bg-top animate-fade-in-up animated-box ${
-                        isVisible ? 'animated-box' : 'opacity-0'
-                    }`}
-                    style={{ backgroundImage: 'url(/box-with-things.png)' }}
-                />
+            {/* Hero Section */}
+            <div
+                className="relative flex flex-col items-center justify-center h-screen bg-cover bg-center"
+                style={{ backgroundImage: 'url(/datzwild-hero.png)' }}
+            >
+                <h1 className="text-4xl rashkey mb-4 text-black animate-fade-in-up z-10">Here Comes The First WAVE!</h1>
+                <h1 className="text-8xl rashkey text-black animate-fade-in-up z-10">DATZ WILD!</h1>
                 <button
                     onClick={() => setShowCard(true)} // Show the card when clicked
-                    className="bg-blue-500 hover:bg-blue-300 font-bold rounded-full text-black p-5 px-10"
+                    className="bg-black animate-fade-in-up mt-4 hover:bg-yellow-600 font-bold rounded-full text-yellow p-5 px-10"
                 >
                     Get now!
                 </button>
+                <div className="absolute inset-0 "></div>
+            </div>
+
+            {/* Content Section */}
+            <div className="flex h-full justify-center items-center flex-1 flex-col gap-4 rounded-xl p-4">
+                
 
                 {/* Card Section */}
                 {showCard && (
@@ -88,8 +91,8 @@ export default function Home() {
                     </div>
                 )}
 
-                <div className="flex mt-20 justify-center items-center flex-col flex-1">
-                    <h1 className="text-4xl"> What our Box Has inside of it:</h1>
+                <div className="flex mt-5 justify-center items-center flex-col flex-1">
+                    <h1 className="text-4xl mb-5"> What We Have In Store:</h1>
                     <ul className="text-center">
                         <li className="my-2">
                             <span>Key Chains</span>
