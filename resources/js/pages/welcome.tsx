@@ -15,10 +15,10 @@ export default function Welcome() {
                     <nav className="flex items-center justify-end gap-4">
                         {auth.user ? (
                             <Link
-                                href={route('dashboard')}
+                                href={route('home')}
                                 className="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
                             >
-                                Dashboard
+                                Home
                             </Link>
                         ) : (
                             <>
@@ -40,7 +40,7 @@ export default function Welcome() {
                 </header>
                 <div className="flex w-full items-center justify-center opacity-100 transition-opacity duration-750 lg:grow starting:opacity-0">
                     <main className=' text-white'>
-                        <h1 className='font-lite text-7xl mb-8'>Welcome to <h1 className='shizuru text-[100px]'>EksotikaBox</h1></h1>
+                        <h1 className='font-lite text-7xl mb-8'>Welcome to <h1 className='rashkey text-[100px]'>WildSide</h1></h1>
                         <p>
                             localbrand is a subscription based e-commerce platform that provides merchandise for those in love with Indonesia's local aquatic life
                         </p>
