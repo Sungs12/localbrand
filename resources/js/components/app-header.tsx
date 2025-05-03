@@ -110,7 +110,7 @@ export function AppHeader({ breadcrumbs = [] }: AppHeaderProps) {
                     </div>
 
                     <Link href="/dashboard" prefetch className="flex items-center space-x-2">
-                        <h1 className='text-2xl font-bold flex items-center shizuru'><FishSymbol className='mr-2'/>EksotikaBox</h1>
+                        <h1 className='text-2xl font-bold flex items-center rashkey'><FishSymbol className='mr-2'/>WildSide</h1>
                     </Link>
 
                     {/* Desktop Navigation */}

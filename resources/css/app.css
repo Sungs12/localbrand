@@ -163,7 +163,17 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Rashkey';
+    src:url('/Rashkey.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 .shizuru{
     font-family:shizuru;
+}
+.rashkey
+{
+    font-family:'Rashkey';
 }
