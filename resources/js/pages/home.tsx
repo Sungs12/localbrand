@@ -76,8 +76,8 @@ export default function Home() {
                     <div className="fixed inset-0 flex items-center justify-center bg-black/50 bg-opacity-50 z-50">
                         <div className="bg-gray-900 rounded-lg shadow-lg p-6 w-96 flex flex-col ">
                             <h2 className="text-2xl font-bold mb-4 border-b-1 my-2 pb-2 border-white">BCA Rekening</h2>
-                            <p className="text-lg mb-2">Account Name: John Doe</p>
-                            <p className="text-lg mb-4">Account Number: 1234567890</p>
+                            <p className="text-lg mb-2">Account Name : James Tanu</p>
+                            <p className="text-lg mb-4">Account Number : 1234567890</p>
                             <button
                                 onClick={() => setShowCard(false)} // Close the card when clicked
                                 className="bg-red-500 hover:bg-red-400 text-white font-bold self-center py-2 px-4 rounded"
@@ -90,7 +90,7 @@ export default function Home() {
 
                 <div className="flex mt-20 justify-center items-center flex-col flex-1">
                     <h1 className="text-4xl"> What our Box Has inside of it:</h1>
-                    <ul>
+                    <ul className="text-center">
                         <li className="my-2">
                             <span>Key Chains</span>
                         </li>

@@ -58,17 +58,17 @@ export default function Catalog() {
                     <div className="flex slide-up bg-neutral-800 flex-col pb-4 rounded-lg items-center justify-center m-8">
                         <img src="/tshirt.png"  className="w-96 h-96 rounded-lg shadow-lg" />
                         <span className="font-bold py-4 text-4xl">Tiger Datz T-shirt</span>
-                        <p>Rp 150.000,00</p>
+                        <p>Rp 109.999,00</p>
                     </div>
                     <div className="flex slide-up bg-neutral-800 flex-col pb-4 rounded-lg items-center justify-center m-xl m-8">
                         <img src="/keychain.png" className="w-96 h-96 rounded-lg shadow-lg" />
                         <span className="font-bold py-4 text-4xl">Tiger Datz KeyChain</span>
-                        <p>Rp 150.000,00</p>
+                        <p>Rp 49.999,00</p>
                     </div>
                     <div className="flex slide-up bg-neutral-800 flex-col pb-4 rounded-lg items-center justify-center m-xl m-8">
                         <img src="/stickers.png" className="w-96 h-96 rounded-lg shadow-lg" />
                         <span className="font-bold py-4 text-4xl">Tiger Datz Stickers</span>
-                        <p>Rp 150.000,00</p>
+                        <p>Rp 15.000,00</p>
                     </div>
                 </div>
             </div>
