@@ -55,22 +55,22 @@ export default function Catalog() {
                 {/* Heading Section */}
                 <h1 className="about-heading text-6xl font-bold mb-6 text-center">Our Catalog Of Products</h1>
                 <div className="flex align-center flex-wrap justify-center products">
-                    <div className="flex slide-up bg-neutral-800 flex-col pb-4 rounded-lg items-center justify-center m-8">
+                    <div className="flex slide-up bg-neutral-200 dark:bg-neutral-800 flex-col pb-4 rounded-lg items-center justify-center m-8">
                         <img src="/shirt1.png"  className="w-96 h-96 rounded-lg shadow-lg" />
                         <span className="font-bold py-4 text-4xl">Tiger Datz T-shirt</span>
                         <p>Rp 109.999,00</p>
                     </div>
-                    <div className="flex slide-up bg-neutral-800 flex-col pb-4 rounded-lg items-center justify-center m-xl m-8">
+                    <div className="flex slide-up bg-neutral-200 dark:bg-neutral-800 flex-col pb-4 rounded-lg items-center justify-center m-xl m-8">
                         <img src="/keychain1.png" className="w-96 h-96 rounded-lg shadow-lg" />
                         <span className="font-bold py-4 text-4xl">Tiger Datz KeyChain</span>
                         <p>Rp 49.999,00</p>
                     </div>
-                    <div className="flex slide-up bg-neutral-800 flex-col pb-4 rounded-lg items-center justify-center m-xl m-8">
+                    <div className="flex slide-up bg-neutral-200 dark:bg-neutral-800 flex-col pb-4 rounded-lg items-center justify-center m-xl m-8">
                         <img src="/stickers.png" className="w-96 h-96 rounded-lg shadow-lg" />
                         <span className="font-bold py-4 text-4xl">Tiger Datz Stickers</span>
                         <p>Rp 15.000,00</p>
                     </div>
-                    <div className="flex slide-up bg-neutral-800 flex-col pb-4 rounded-lg items-center justify-center m-xl m-8">
+                    <div className="flex slide-up bg-neutral-200 dark:bg-neutral-800 flex-col pb-4 rounded-lg items-center justify-center m-xl m-8">
                         <img src="/datzwild-bundle.png" className="w-96 h-96 rounded-lg shadow-lg" />
                         <span className="font-bold py-4 text-4xl">Datz Wild Bundle</span>
                         <p>Rp 200.000,00</p>
