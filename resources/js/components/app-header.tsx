@@ -35,6 +35,11 @@ const mainNavItems: NavItem[] = [
         title:'What\'s Inside',
         href:'/inside',
         icon: BoxSelectIcon
+    },
+    {
+        title:'Blogs',
+        href:'/blogs',
+        icon: BoxSelectIcon
     }
 ];
 
