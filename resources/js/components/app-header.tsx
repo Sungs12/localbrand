@@ -11,50 +11,8 @@ import { useInitials } from '@/hooks/use-initials';
 import { cn } from '@/lib/utils';
 import { type BreadcrumbItem, type NavItem, type SharedData } from '@/types';
 import { Link, usePage } from '@inertiajs/react';
-import { BookOpen, Folder,  Menu, Search, BoxIcon, FishSymbol, BrainIcon, BoxSelectIcon, BookAIcon } from 'lucide-react';
+import { BookOpen, Folder, Menu, Search, BoxIcon, FishSymbol, BrainIcon, BoxSelectIcon, BookAIcon } from 'lucide-react';
 import AppLogoIcon from './app-logo-icon';
-
-const mainNavItems: NavItem[] = [
-    {
-        title: 'Home',
-        href: '/home',
-        icon: BoxIcon,
-    },
-    {
-        title: 'About',
-        href: '/about',
-        icon: BrainIcon,
-
-    },
-    {
-        title:'Catalog',
-        href:'/catalog',
-        icon:BookAIcon
-    },
-    {
-        title:'What\'s Inside',
-        href:'/inside',
-        icon: BoxSelectIcon
-    },
-    {
-        title:'Blogs',
-        href:'/blogs',
-        icon: BoxSelectIcon
-    }
-];
-
-const rightNavItems: NavItem[] = [
-    {
-        title: 'Repository',
-        href: 'https://github.com/laravel/react-starter-kit',
-        icon: Folder,
-    },
-    {
-        title: 'Documentation',
-        href: 'https://laravel.com/docs/starter-kits',
-        icon: BookOpen,
-    },
-];
 
 const activeItemStyles = 'text-neutral-900 dark:bg-neutral-800 dark:text-neutral-100';
 
@@ -65,7 +23,49 @@ interface AppHeaderProps {
 export function AppHeader({ breadcrumbs = [] }: AppHeaderProps) {
     const page = usePage<SharedData>();
     const { auth } = page.props;
+    const user = auth.user;
     const getInitials = useInitials();
+    const mainNavItems: NavItem[] = [
+        {
+            title: 'Home',
+            href: '/home',
+            icon: BoxIcon,
+        },
+        {
+            title: 'About',
+            href: '/about',
+            icon: BrainIcon,
+        },
+        {
+            title: 'Catalog',
+            href: '/catalog',
+            icon: BookAIcon,
+        },
+        {
+            title: "What's Inside",
+            href: '/inside',
+            icon: BoxSelectIcon,
+        },
+        {
+            title: 'Blogs',
+            href: '/blogs',
+            icon: BoxSelectIcon,
+        }
+    ];
+
+    const rightNavItems: NavItem[] = [
+        {
+            title: 'Repository',
+            href: 'https://github.com/laravel/react-starter-kit',
+            icon: Folder,
+        },
+        {
+            title: 'Documentation',
+            href: 'https://laravel.com/docs/starter-kits',
+            icon: BookOpen,
+        },
+    ];
+
     return (
         <>
             <div className="border-sidebar-border/80 border-b">
@@ -104,9 +104,10 @@ export function AppHeader({ breadcrumbs = [] }: AppHeaderProps) {
                                                     className="flex items-center space-x-2 font-medium"
                                                 >
                                                     {item.icon && <Icon iconNode={item.icon} className="h-5 w-5" />}
-                                                    <span>{item.title}</span>
+                                                    <span>{item.title}s</span>
                                                 </a>
                                             ))}
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -115,13 +116,27 @@ export function AppHeader({ breadcrumbs = [] }: AppHeaderProps) {
                     </div>
 
                     <Link href="/dashboard" prefetch className="flex items-center space-x-2">
-                        <h1 className='text-2xl font-bold flex items-center rashkey'><FishSymbol className='mr-2'/>WildSide</h1>
+                        <h1 className="text-2xl font-bold flex items-center rashkey">
+                            <FishSymbol className="mr-2" />
+                            WildSide
+                        </h1>
                     </Link>
 
                     {/* Desktop Navigation */}
                     <div className="ml-6 hidden h-full items-center space-x-6 lg:flex">
                         <NavigationMenu className="flex h-full items-stretch">
                             <NavigationMenuList className="flex h-full items-stretch space-x-2">
+                            {user.role == 'admin'?
+                                                <a
+                                                key='blog-form'
+                                                href='/admin/blog-form'
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex items-center space-x-2 font-medium"
+                                            >
+                                                <span>add blog</span>
+                                            </a>:''
+                                            }
                                 {mainNavItems.map((item, index) => (
                                     <NavigationMenuItem key={index} className="relative flex h-full items-center">
                                         <Link
@@ -150,6 +165,7 @@ export function AppHeader({ breadcrumbs = [] }: AppHeaderProps) {
                                 <Search className="!size-5 opacity-80 group-hover:opacity-100" />
                             </Button>
                             <div className="hidden lg:flex">
+                                
                                 {rightNavItems.map((item) => (
                                     <TooltipProvider key={item.title} delayDuration={0}>
                                         <Tooltip>

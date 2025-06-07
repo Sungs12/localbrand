@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Models\Blog;
 use Inertia\Inertia;
 use App\Http\Controllers\Api\BlogController;
+use App\Http\Middleware\CheckAdmin;
+
 Route::get('/', function () {
     return Inertia::render('welcome');
 })->name('home');
@@ -34,8 +36,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
         return Inertia::render('inside');
     })->name("What's Inside");
 });
-Route::middleware(['auth', 'verified'])->group(function () {
-    Route::get('blog-form', function () {
+Route::middleware(['auth', 'verified', CheckAdmin::class])->group(function () {
+    Route::get('admin/blog-form', function () {
         return Inertia::render('admin/blogForm');
     })->name("Add Blog");
 });

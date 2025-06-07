@@ -20,7 +20,6 @@ function BlogForm() {
     const [preview, setPreview] = useState<string | null>(null);
     const { auth } = usePage<SharedData>().props;
     const {blogs} = usePage().props;
-    const token = usePage<SharedData>().props.auth;
     const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const file = e.target.files?.[0];
         if (file) {
@@ -43,6 +42,7 @@ function BlogForm() {
         });
 
         setContent(contentDiv.innerHTML); 
+        console.log('content', content)
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
