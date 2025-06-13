@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { type BreadcrumbItem, type SharedData } from '@/types';
 import { usePage } from '@inertiajs/react';
 import AppLayout from '@/layouts/app-layout';
-import { Inertia } from '@inertiajs/react';
 import axios from 'axios';
 
 const breadcrumbs: BreadcrumbItem[] = [
